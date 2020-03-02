@@ -125,7 +125,99 @@ header {
   main styling starts here
 =================================*/
 
+.tabs { margin: 20px;}
 
+
+.tablinks li a {
+  width: 100%;
+  padding: 25px;
+  box-sizing: border-box;
+  color: #2b2e37;
+  font-size: 22px;
+  text-align: center;
+  text-transform: capitalize;
+  transition: all 0.3s ease;
+}
+
+.tablinks li {
+  width: 35%;
+  border: none;
+  border-bottom: 3px solid #afb5bb;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+
+.tabActive {
+  border: 2px solid #afb5bb;
+  border-bottom: transparent;
+  border-style: double;
+}
+
+.tablinks {
+  margin-bottom: 40px;
+  position: relative;
+  display: flex;
+}
+
+.tabcontent li {
+  width: 100%;
+  border: 2px solid #ccc;
+}
+
+.tabcontent { animation: fadeEffect 2s; }
+
+.tabcontent #Paris,
+.tabcontent #Tokyo { display: none; }
+.tabcontent figure { float: left; }
+
+.tabcontent h3{
+  width: 25%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin: 0 auto;
+  padding: 3%;
+  font-size: 35px;
+  cursor: pointer;
+  border-bottom: 1px solid #afb5bb;
+  transition: all 0.3s ease;
+}
+
+.tabcontent p {
+  width: 25%;
+  color: #7b5b5b;
+  font-size: 22px;
+  margin: 0 auto;
+  padding: 3%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.visible { 
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+.hidden { 
+  display: none;
+  transition: all 0.3s ease;
+}
+
+.noscroll { overflow: hidden; }
+
+/* Fade in tabs */
+@-webkit-keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
 
 /*=================================
   main styling ends here
