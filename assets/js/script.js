@@ -10,6 +10,17 @@ function Tab() {
     el.addEventListener("click", TabsofCity);
   });
 
+  function firstActive() {
+    for (content in tabContent) {
+      tabContent[content].classList.add('hidden');
+      if(tabContent[content].id === tabContent[0].id) {
+        makeitBlock();
+        preActive(tabLinks[content]);
+      }
+    }
+  }
+  firstActive();
+
   function TabsofCity(e) {
     city = e.currentTarget;
     cityName = city.innerText;
@@ -23,6 +34,14 @@ function Tab() {
     for (var Link in tabLinks) {
       tabLinks[Link].className = tabLinks[Link].className.replace(" tabActive", "");
     }
+    makeitActive(e);
+  }
+
+  function preActive(currentTabLink) {
+    currentTabLink.className += " tabActive";
+  }
+
+  function makeitActive(e) {
     e.currentTarget.className += " tabActive";
   }
 
