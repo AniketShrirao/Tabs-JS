@@ -139,7 +139,7 @@ header {
   transition: all 0.3s ease;
 }
 
-.tablinks li {
+.link{
   width: 35%;
   border: none;
   border-bottom: 3px solid #afb5bb;
@@ -149,9 +149,13 @@ header {
 }
 
 .tabActive {
+  width: 35%;
   border: 2px solid #afb5bb;
   border-bottom: transparent;
   border-style: double;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
 }
 
 .tablinks {
@@ -166,9 +170,6 @@ header {
 }
 
 .tabcontent { animation: fadeEffect 2s; }
-
-.tabcontent #Paris,
-.tabcontent #Tokyo { display: none; }
 .tabcontent figure { float: left; }
 
 .tabcontent h3{
@@ -205,8 +206,6 @@ header {
   display: none;
   transition: all 0.3s ease;
 }
-
-.noscroll { overflow: hidden; }
 
 /* Fade in tabs */
 @-webkit-keyframes fadeEffect {
